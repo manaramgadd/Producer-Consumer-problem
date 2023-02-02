@@ -1,13 +1,11 @@
 # Producer-Consumer-problem
-t is required to implement the Bounded-Buffer Producer/Consumer problem as learnt in the 
+It is required to implement the Bounded-Buffer Producer/Consumer problem as learnt in the 
 lectures. You may have up to 20 producers. Each Producer would declare the live price of a commodity 
 (e.g., GOLD, SILVER, CRUDEOIL, COTTON, …). One Consumer would show a dashboard for the prices of all 
 commodities. Producers and Consumer would run indefinitely sharing the prices through shared memory.
-##Producers
+# Producers
 Each producer is supposed to continuously declare the price of one commodity. For simplicity, we assume 
-that each commodity price follows a normal distribution with parameters (𝜇, 𝜎
-2
-). Therefore, producers 
+that each commodity price follows a normal distribution with parameters (𝜇, 𝜎2). Therefore, producers 
 will generate a new random price, share it with the consumer, and then sleep for an interval before 
 producing the next price.
 All producers are processes running the same codebase. Producers are to be run concurrently, either in 
@@ -23,7 +21,7 @@ the current price of Natural Gas every 200ms according to a normal distribution 
 (mean=0.5 and variance=0.25). The size of the shared bounded buffer is 40 entries.
 Let the producer log what he does by writing to stderr.
 
-##Consumer
+# Consumer
 The consumer is to print the current price of each commodity, along the average of the current and past 
 4 readings. An Up/Down arrow to show whether the current Price (AvgPrice) got increased or decreased 
 from the prior one. Until you receive current prices, use 0.00 for the current price of any commodity.
@@ -31,7 +29,7 @@ For simplicity, let’s limit the commodities to GOLD, SILVER, CRUDEOIL, NATURAL
 COPPER, NICKEL, LEAD, ZINC, MENTHAOIL, and COTTON. Show the commodities in alphabetical order.
 While running the consumer, you will specify the following command line argument:
 • Bounded-Buffer Size (number of entries); N – an integer.
-##Below is an example output.
+# Below is an example output.
 +-------------------------------------+
 | Currency | Price | AvgPrice |
 +-------------------------------------+
