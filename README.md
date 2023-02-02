@@ -31,13 +31,23 @@ While running the consumer, you will specify the following command line argument
 • Bounded-Buffer Size (number of entries); N – an integer.
 # Below is an example output.
 +-------------------------------------+
+
 | Currency | Price | AvgPrice |
+
 +-------------------------------------+
+
 | ALUMINIUM | 0.00 | 0.00 |
+
 | COPPER | 0.00 | 0.00 |
+
 | ... |
+
 | GOLD | 1810.31↑ | 1815.25↑ |
+
 | ... |
+
 | SILVER | 22.36↓ | 22.80↓ |
+
 | ZINC | 0.00 | 0.00 |
+
 +-------------------------------------+
